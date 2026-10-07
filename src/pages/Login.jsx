@@ -1,3 +1,5 @@
+// Making this change to reflect 
+
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
@@ -11,7 +13,7 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if(login(email, password)) {
+    if (login(email, password)) {
       navigate("/");
     } else {
       setError("Please fill all fields");
@@ -25,11 +27,11 @@ export default function Login() {
       <form onSubmit={handleLogin} className="space-y-4">
         <div>
           <label className="block text-gray-700 mb-1">Email</label>
-          <input type="email" className="w-full border p-2 rounded focus:ring-orange-500 focus:border-orange-500 outline-none" value={email} onChange={e=>setEmail(e.target.value)} required />
+          <input type="email" className="w-full border p-2 rounded focus:ring-orange-500 focus:border-orange-500 outline-none" value={email} onChange={e => setEmail(e.target.value)} required />
         </div>
         <div>
           <label className="block text-gray-700 mb-1">Password</label>
-          <input type="password" className="w-full border p-2 rounded focus:ring-orange-500 focus:border-orange-500 outline-none" value={password} onChange={e=>setPassword(e.target.value)} required />
+          <input type="password" className="w-full border p-2 rounded focus:ring-orange-500 focus:border-orange-500 outline-none" value={password} onChange={e => setPassword(e.target.value)} required />
         </div>
         <button type="submit" className="w-full bg-orange-600 text-white p-2 rounded hover:bg-orange-700 font-medium">Log In</button>
       </form>
