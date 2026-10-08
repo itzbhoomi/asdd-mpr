@@ -13,6 +13,12 @@ pipeline {
         JWT_EXPIRES_IN = '24h'
     }
 
+    tools {
+        // Must match the exact name configured in:
+        // Jenkins → Manage Jenkins → Tools → NodeJS installations → Name
+        nodejs 'NodeJS-18'
+    }
+
     stages {
 
         stage('Checkout Code') {
